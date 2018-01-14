@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+  <p id="info"></p>
+  <h1 id="weather_app">Погода</h1>
+  </br>
+  <p>Страна: <span id="country"></span></p>
+  <p>Город: <span id="town"></span> (долгота: <span id="lon"></span>, широта: <span id="lat"></span>)</p>
+  <p>Температура: <span id="temp"></span></p>
+  <p>Давление: <span id="pressure"></span></p>
+  <p>Ветер: <span id="wind_speed"></span> <span id="wind_deg"></span></p>
+  <p>Рассвет в <span id="sunrise"></span></p>
+  <p>Закат в <span id="sunset"></span></p>
+  <p id="weather"></p>
+  <img src="" alt="">
+  <p>by Overman231</p>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>$.ajax({
+        url: "https://api.weatherunlocked.com/api/current/36,50?app_id=bce80d98&app_key=d65fcc6b7279f9323813c106ee39adb8",
+        type: "GET",
+        success: function (parsedResponse, statusText, jqXhr) {
+
+            console.log(parsedResponse);
+
+        },
+        error: function (error) {
+
+            console.log(error);
+        }
+    });
+</script>
+</body>
+</html>
